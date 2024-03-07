@@ -39,4 +39,4 @@ public class EntrepriseValidator {
         return errors;
     }
     }
-}
+
