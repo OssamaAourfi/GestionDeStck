@@ -1,14 +1,12 @@
 package com.ossama.gestiondestock.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.List;
 
 @Data
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
@@ -28,6 +26,8 @@ public class Fournisseur extends AbstractEntity {
     private String email;
     @Column(name="numTel")
     private String numTel;
+    @Column(name = "identreprise")
+    private Integer idEntreprise;
     @OneToMany(mappedBy = "fournisseur")
     private List<CommandeFournisseur> commandeFournisseurs;
 }
