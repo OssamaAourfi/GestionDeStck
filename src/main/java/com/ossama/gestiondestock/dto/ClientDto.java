@@ -44,7 +44,7 @@ public class ClientDto {
                 .build();
     }
 
-    public static Client toEntity(Client dto) {
+    public static Client toEntity(ClientDto dto) {
         if (dto == null) {
             return null;
         }
